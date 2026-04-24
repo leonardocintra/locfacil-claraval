@@ -42,11 +42,11 @@ export function Hero() {
         <div className="relative w-full mt-16 flex flex-col md:flex-row justify-between items-end min-h-[400px]">
 
           {/* Badges Flutuantes à esquerda */}
-          <div className="hidden md:flex flex-col gap-4 absolute left-0 bottom-10 z-20">
+          <div className="hidden md:flex flex-col gap-5 absolute left-8 lg:left-[15%] bottom-16 lg:bottom-24 z-20">
             {[
-              { icon: <Truck className="w-4 h-4 text-primary" />, text: "Entrega Rápida" },
-              { icon: <ShieldCheck className="w-4 h-4 text-primary" />, text: "Sem Burocracia" },
-              { icon: <Star className="w-4 h-4 text-accent" />, text: "+500 Obras Atendidas" },
+              { icon: <Truck className="w-5 h-5 text-primary" />, text: "Entrega Rápida" },
+              { icon: <ShieldCheck className="w-5 h-5 text-primary" />, text: "Sem Burocracia" },
+              { icon: <Star className="w-5 h-5 text-accent" />, text: "+500 Obras Atendidas" },
             ].map((badge, index) => (
               <motion.div
                 key={index}
@@ -54,7 +54,7 @@ export function Hero() {
                 initial="hidden"
                 animate="visible"
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.15 }}
-                className="glassmorphism flex items-center gap-3 px-5 py-3 rounded-full text-sm font-medium text-text-dark shadow-sm"
+                className="glassmorphism flex items-center gap-4 px-6 py-4 rounded-full text-base font-bold text-text-dark shadow-md hover:scale-105 transition-transform"
               >
                 {badge.icon}
                 {badge.text}
