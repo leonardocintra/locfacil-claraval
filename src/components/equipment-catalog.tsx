@@ -71,7 +71,7 @@ export function EquipmentCatalog() {
                 className="bg-white border border-[#F0F0F0] rounded-2xl p-4 flex flex-col group hover:-translate-y-2 hover:shadow-xl hover:border-primary transition-all duration-300"
               >
                 {/* Image Area */}
-                <div className="relative w-full h-[220px] bg-light-bg rounded-xl mb-5 flex items-center justify-center p-4 overflow-hidden">
+                <div className="relative w-full aspect-square bg-light-bg rounded-xl mb-5 flex items-center justify-center p-4 overflow-hidden">
                   {product.badge && (
                     <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[0.7rem] uppercase font-bold text-primary tracking-widest shadow-sm z-10">
                       {product.badge}

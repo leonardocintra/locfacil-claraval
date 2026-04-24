@@ -1,3 +1,9 @@
+# Loc Facil 
+
+<div align="center">
+  <img src="public/locfacil.png" alt="Loc Fácil Logo" width="250" />
+</div>
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
