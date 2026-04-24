@@ -32,7 +32,7 @@ const products = [
     rating: "4.9",
     reviews: 18,
     badge: "",
-    image: "/placeholder-compactador.jpg",
+    image: "/produtos/compactadores/compactador-gasolina.png",
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ export function LatestCollection() {
   return (
     <section id="equipamentos" className="py-[80px] bg-white">
       <div className="max-w-[1280px] mx-auto px-6">
-        
+
         {/* Cabeçalho da Seção */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <h2 className="font-heading text-[clamp(1.6rem,3vw,2.4rem)] uppercase text-text-dark max-w-md leading-tight">
@@ -78,8 +78,8 @@ export function LatestCollection() {
                     {product.badge}
                   </span>
                 )}
-                
-                <a 
+
+                <a
                   href={WHATSAPP_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -112,11 +112,11 @@ export function LatestCollection() {
                   <span className="font-medium text-text-mid">{product.rating}</span>
                   <span>· {product.reviews} avaliações</span>
                 </div>
-                
+
                 <h3 className="font-sans font-medium text-[0.95rem] text-text-dark mb-2">
                   {product.name}
                 </h3>
-                
+
                 <div className="mt-auto pt-2 flex items-center justify-between">
                   <p className="font-heading text-[1.3rem] font-bold text-primary">
                     <span className="text-sm font-sans text-text-mid font-normal mr-1">A partir de</span>
