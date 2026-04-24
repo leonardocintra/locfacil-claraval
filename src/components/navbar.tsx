@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Search, MessageCircle } from "lucide-react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const WHATSAPP_LINK = "https://wa.me/5516999775829?text=Ol%C3%A1%21+Gostaria+de+alugar+um+equipamento+da+Loc+F%C3%A1cil.";
@@ -26,10 +27,16 @@ export function Navbar() {
     >
       <div className="max-w-[1280px] mx-auto px-6 h-full flex items-center justify-between">
         {/* Logo */}
-        <div className="font-heading text-2xl font-bold uppercase tracking-wide">
-          <span className="text-secondary">Loc</span>
-          <span className="text-primary">Fácil</span>
-        </div>
+        <a href="#" className="flex items-center">
+          <Image
+            src="/locfacil.png"
+            alt="Loc Fácil Logo"
+            width={140}
+            height={45}
+            className="object-contain"
+            priority
+          />
+        </a>
 
         {/* Desktop Links */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">

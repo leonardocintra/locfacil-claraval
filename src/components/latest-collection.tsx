@@ -61,7 +61,7 @@ export function LatestCollection() {
         </div>
 
         {/* Row de Produtos */}
-        <div className="flex overflow-x-auto pb-8 -mx-6 px-6 md:mx-0 md:px-0 gap-6 snap-x hide-scrollbar">
+        <div className="flex overflow-x-auto pt-4 pb-8 -mx-6 px-6 md:mx-0 md:px-0 gap-6 snap-x hide-scrollbar">
           {products.map((product, index) => (
             <motion.div
               key={product.id}
