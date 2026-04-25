@@ -20,7 +20,7 @@ export function WhyLocFacil() {
           {/* Imagem de Fundo (Maior) */}
           <div className="absolute left-0 bottom-0 w-[80%] h-[75%] rounded-3xl overflow-hidden border-4 border-secondary-dark shadow-2xl z-10">
             <Image
-              src="/placeholder-site1.jpg"
+              src="/cortador.png"
               alt="Obra em andamento"
               fill
               className="object-cover"
@@ -34,7 +34,7 @@ export function WhyLocFacil() {
           {/* Imagem da Frente (Menor) */}
           <div className="absolute right-0 top-10 w-[60%] h-[60%] rounded-3xl overflow-hidden border-4 border-secondary-dark shadow-xl z-20">
             <Image
-              src="/placeholder-site2.jpg"
+              src="/equipamento-revisado.png"
               alt="Trabalhador usando equipamento"
               fill
               className="object-cover"
