@@ -71,25 +71,25 @@ export function EquipmentCatalog() {
                 className="bg-white border border-[#F0F0F0] rounded-2xl p-4 flex flex-col group hover:-translate-y-2 hover:shadow-xl hover:border-primary transition-all duration-300"
               >
                 {/* Image Area */}
-                <div className="relative w-full aspect-square bg-light-bg rounded-xl mb-5 flex items-center justify-center p-4 overflow-hidden">
-                  {product.badge && (
-                    <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[0.7rem] uppercase font-bold text-primary tracking-widest shadow-sm z-10">
-                      {product.badge}
-                    </span>
-                  )}
-                  
+                <div className="relative w-full aspect-square bg-light-bg rounded-xl mb-5 overflow-hidden">
                   <div className="relative w-full h-full transform group-hover:scale-105 transition-transform duration-500">
                     <Image
                       src={product.image}
                       alt={product.name}
                       fill
-                      className="object-contain mix-blend-multiply"
+                      className="object-contain mix-blend-multiply p-2"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
                         e.currentTarget.parentElement!.classList.add('bg-gray-200');
                       }}
                     />
                   </div>
+                  
+                  {product.badge && (
+                    <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[0.7rem] uppercase font-bold text-primary tracking-widest shadow-sm z-20 pointer-events-none">
+                      {product.badge}
+                    </span>
+                  )}
                 </div>
 
                 {/* Informações */}

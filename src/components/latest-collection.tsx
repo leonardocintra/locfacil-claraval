@@ -14,7 +14,7 @@ const products = [
     rating: "4.9",
     reviews: 42,
     badge: "Popular",
-    image: "/placeholder-betoneira.jpg",
+    image: "/produtos/betoneira/betoneira.png",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const products = [
     rating: "4.8",
     reviews: 34,
     badge: "Novo",
-    image: "/placeholder-martelete.jpg",
+    image: "/produtos/martelete/martelete.png",
   },
   {
     id: 3,
@@ -72,9 +72,22 @@ export function LatestCollection() {
               className="min-w-[280px] md:min-w-[300px] flex-1 bg-white border border-[#F0F0F0] rounded-2xl p-4 flex flex-col group hover:-translate-y-2 hover:shadow-[0_12px_24px_rgba(0,0,0,0.06)] hover:border-primary transition-all duration-300 snap-start relative"
             >
               {/* Image Area */}
-              <div className="relative w-full h-[180px] bg-light-bg rounded-xl mb-4 flex items-center justify-center p-4">
+              <div className="relative w-full aspect-square bg-light-bg rounded-xl mb-4 overflow-hidden">
+                <div className="relative w-full h-full transform group-hover:scale-105 transition-transform duration-500">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-contain mix-blend-multiply p-2"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.parentElement!.classList.add('bg-gray-200');
+                    }}
+                  />
+                </div>
+
                 {product.badge && (
-                  <span className="absolute top-3 left-3 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full text-[0.7rem] uppercase font-bold text-primary tracking-widest shadow-sm">
+                  <span className="absolute top-3 left-3 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full text-[0.7rem] uppercase font-bold text-primary tracking-widest shadow-sm z-20 pointer-events-none">
                     {product.badge}
                   </span>
                 )}
@@ -83,26 +96,11 @@ export function LatestCollection() {
                   href={WHATSAPP_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white flex items-center justify-center text-text-light hover:text-[#25D366] hover:bg-[#25D366]/10 transition-colors shadow-sm"
+                  className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white flex items-center justify-center text-text-light hover:text-[#25D366] hover:bg-[#25D366]/10 transition-colors shadow-sm z-20"
                   aria-label="Alugar via WhatsApp"
                 >
                   <MessageCircle className="w-4 h-4" />
                 </a>
-
-                {/* Imagem Placeholder até gerarmos as reais */}
-                <div className="relative w-full h-full">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-contain"
-                    onError={(e) => {
-                      // Fallback para um quadrado cinza se a imagem não existir
-                      e.currentTarget.style.display = 'none';
-                      e.currentTarget.parentElement!.classList.add('bg-gray-200');
-                    }}
-                  />
-                </div>
               </div>
 
               {/* Informações */}
